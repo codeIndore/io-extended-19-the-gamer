@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             buSelected.setBackgroundResource(R.color.blue)
             player1.add(cellID)
             ActivePlayer=2
-            AutoPlay()
+            CheckWiner()
         }else{
             buSelected.text="O"
             buSelected.setBackgroundResource(R.color.darkgreen)
@@ -128,14 +128,31 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        // diagonal 1,3,5
+        if(player1.contains(1) && player1.contains(5) && player1.contains(9)){
+            winer=1
+        }
+        if(player2.contains(1) && player2.contains(5) && player2.contains(9)){
+            winer=2
+        }
+
+
+        // diagonal 3,5,7
+        if(player1.contains(3) && player1.contains(5) && player1.contains(7)){
+            winer=1
+        }
+        if(player2.contains(3) && player2.contains(5) && player2.contains(7)){
+            winer=2
+        }
+
         if( winer != -1){
 
             if (winer==1){
                 Toast.makeText(this," Player 1  win the game", Toast.LENGTH_LONG).show()
-            }else{
+            }else if(winer==2){
                 Toast.makeText(this," Player 2  win the game", Toast.LENGTH_LONG).show()
 
-            }
+            }else{ AutoPlay() }
 
         }
 
