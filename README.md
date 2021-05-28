@@ -7,7 +7,7 @@ Team Name : The Gamer.
 
 Name : Samarth Paliwal.
 
-Github profile : https://github.com/RamSamarthPaliwal
+Github profile : https://github.com/paliwalsamarth
 
 
 Brief Description : The main difficulty was that we need to make the app with kotlin (which was also covered in its session). (A relatively newer language to me also).
